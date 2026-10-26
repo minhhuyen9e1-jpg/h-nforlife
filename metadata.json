@@ -1,0 +1,6 @@
+{
+  "name": "H&N Miền Trung - Hệ Thống Điều Phối Du Lịch Tình Nguyện",
+  "description": "Hệ thống điều phối dịch vụ du lịch tình nguyện nội địa khu vực Miền Trung chuẩn quốc tế, chi phí sinh viên và bảo hộ pháp lý hai chiều.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

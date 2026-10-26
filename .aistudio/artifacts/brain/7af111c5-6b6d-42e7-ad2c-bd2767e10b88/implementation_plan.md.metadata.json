@@ -1,0 +1,6 @@
+{
+  "summary": "Kế hoạch triển khai tính năng Tra Cứu & Theo Dõi Tiến Độ Hồ Sơ Dành Cho Người Đăng Ký (Applicant Tracking & Detailed Itinerary). Cho phép ứng viên tra cứu nhanh theo Số Điện Thoại hoặc Mã Hồ Sơ, theo dõi tiến trình 4 giai đoạn minh bạch (Đã gửi đơn, Chờ phản hồi trong 24h, Đã liên hệ xác nhận, Đã ký HĐ & kích hoạt bảo hiểm), và mở khóa lịch trình 4 tuần chi tiết kèm điểm tập kết xe 29 chỗ và thông tin liên hệ Local Buddy 24/7.",
+  "updatedAt": "2026-10-13T14:20:13.105938711Z",
+  "requestFeedback": true,
+  "userFacing": true
+}

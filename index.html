@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function() {
+        try {
+          var _origFetch = window.fetch;
+          Object.defineProperty(window, 'fetch', {
+            configurable: true,
+            enumerable: true,
+            get: function() {
+              return _origFetch;
+            },
+            set: function(val) {
+              _origFetch = val;
+            }
+          });
+        } catch (err) {}
+
+        window.addEventListener('error', function(event) {
+          if (
+            (event.filename && event.filename.indexOf('chrome-extension://') !== -1) ||
+            (event.message && (
+              event.message.indexOf('Cannot set property fetch of #<Window>') !== -1 ||
+              event.message.indexOf('only a getter') !== -1
+            ))
+          ) {
+            event.preventDefault();
+            event.stopImmediatePropagation();
+            return true;
+          }
+        }, true);
+      })();
+    </script>
+    <title>H&N Miền Trung - Hệ Thống Điều Phối Du Lịch Tình Nguyện</title>
+    <meta name="description" content="Hệ thống điều phối dịch vụ du lịch tình nguyện nội địa khu vực Miền Trung chuẩn quốc tế, chi phí sinh viên và bảo hộ pháp lý hai chiều." />
+    <meta property="og:title" content="H&N Miền Trung - Hệ Thống Điều Phối Du Lịch Tình Nguyện" />
+    <meta property="og:description" content="Hệ thống điều phối dịch vụ du lịch tình nguyện nội địa khu vực Miền Trung chuẩn quốc tế, chi phí sinh viên và bảo hộ pháp lý hai chiều." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
